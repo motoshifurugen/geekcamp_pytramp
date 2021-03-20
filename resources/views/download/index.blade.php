@@ -7,16 +7,32 @@
 </head>
 <body>
     <div id="app">
-        <!-- デフォルトだとこの中ではvue.jsが有効 -->
-        <!-- example-component はLaravelに入っているサンプルのコンポーネント -->
-        {{-- <example-component></example-component> --}}
-    </div>
-    <div class="content">
-        <div class="title">
-            <p>{{ $appName }}</p>
-        </div>
-        <div class="downloadBox">
-            <a href="/downloadFile">/downloadFile</a>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="center-text">
+                    <div>
+                        <span class="title">{{ $appName }}</span>
+                    </div>
+                    <div class="sub-title">
+                        <span>Tramp Game Made In Python</span>
+                    </div>
+                    <div class="text-subtitle">2021.3.21 created by TrampM4kers</div>
+                    <div class="downloadBox">
+                        <a href="/downloadFile">PyTrampをダウンロードする</a>
+                    </div>
+                    <div class="button-box">
+                        <a class="button-wrapper">
+                            <span class="button about"><span>PyTrampルール</span></span>
+                        </a>
+                        <a class="button-wrapper">
+                            <span class="button about"><span>Python実行環境構築</span></span>
+                        </a>
+                        <a class="button-wrapper">
+                            <span class="button about"><span>作成者紹介</span></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 <script src=" {{ mix('js/app.js') }} "></script>
