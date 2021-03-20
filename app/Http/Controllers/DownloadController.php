@@ -8,7 +8,7 @@ class DownloadController extends Controller
 {
     public function index()
     {
-        $appName = 'PyTrampダウンロードアプリ';
+        $appName = 'PyTramp';
         return view('download/index', compact('appName'));
     }
 }
