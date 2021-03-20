@@ -3,7 +3,7 @@
 <head>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
-    <title>Top Page</title>
+    <title>About Us</title>
 </head>
 <body>
     <div id="app">
@@ -12,7 +12,7 @@
             <div class="content">
                 <div class="center-text">
                     <div>
-                        <span class="title">{{ $appName }}</span>
+                        <span class="title">このゲームのルール</span>
                     </div>
                     <div class="sub-title">
                         <span>Tramp Game Made In Python</span>
