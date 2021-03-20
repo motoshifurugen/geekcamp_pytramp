@@ -39,6 +39,9 @@
         <div class="downloadBox">
             <a href="#" download="sample.jpg">サンプル画像を保存</a>
         </div>
+        <div class="downloadBox">
+            <a href="/downloadFile">/downloadFile</a>
+        </div>
     </div>
 </body>
 </html>
