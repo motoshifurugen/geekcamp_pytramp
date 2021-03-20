@@ -18,3 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('download', 'App\Http\Controllers\DownloadController@index');
+
+Route::get('downloadFile', function () {
+    return response()->download('../resources/img/sample.jpg');
+});
