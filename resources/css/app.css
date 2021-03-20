@@ -47,13 +47,10 @@ body {
 }
 .title {
     font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
-    /* margin: 2em auto; */
     font-size: 6rem;
     line-height: 6rem;
     letter-spacing: -0.01562em;
     color: #fff;
-    /* border-bottom: solid 10px #FFFFFF; */
-    /* width: 50%; */
     font-weight: 700;
 }
 .sub-title {
@@ -133,4 +130,31 @@ body {
     padding: 10px 16px;
     border-radius: inherit;
     height: 100%;
+}
+.container-fluid {
+    position: relative;
+    z-index: 20;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTA2IDkwaDJ2MmgtMnpNNzQgNjNoMXYxaC0xek0yMyA2NmgxdjFoLTF6TTUwIDExMGgxdjFoLTF6TTYzIDEyOGgxdjFoLTF6TTQ1IDE0OWgxdjFoLTF6TTkyIDE1MWgxdjFoLTF6TTU4IDhoMXYxaC0xek0xNDcgMzNoMnYyaC0yek05MSA0M2gxdjFoLTF6TTE2OSAyOWgxdjFoLTF6TTE4MiAxOWgxdjFoLTF6TTE2MSA1OWgxdjFoLTF6TTEzOCA5NWgxdjFoLTF6TTE5OSA3MWgzdjNoLTN6TTIxMyAxNTNoMnYyaC0yek0xMjggMTYzaDF2MWgtMXpNMjA1IDE3NGgxdjFoLTF6TTE1MiAyMDBoMXYxaC0xek01MiAyMTFoMnYyaC0yek0wIDE5MWgxdjFIMHpNMTEwIDE4NGgxdjFoLTF6Ii8+PC9zdmc+);
+}
+.container {
+    max-width: 100%!important;
+}
+.geek-camp-icon {
+    width: 60px;
+    cursor: pointer;
+}
+.geek-camp-icon img{
+    width: 100%;
+    border-radius: 2rem;
+}
+.github-icon {
+    width: 60px;
+    cursor: pointer;
+}
+.github-icon a {
+    width: 60px;
+}
+.github-icon img {
+    width: 100%;
+    border-radius: 2rem;
 }
