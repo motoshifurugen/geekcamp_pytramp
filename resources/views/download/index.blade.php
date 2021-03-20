@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Top Page</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ mix('css/style.css') }}">
 </head>
 <body>
     <div class="content">
