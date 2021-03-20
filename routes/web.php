@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('download', 'App\Http\Controllers\DownloadController@index');
+
+URL::forceScheme('https');
