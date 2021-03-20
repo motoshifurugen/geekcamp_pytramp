@@ -7,6 +7,7 @@
 </head>
 <body>
     <div id="app">
+        <header-component></header-component>
         <div class="content-wrapper">
             <div class="content">
                 <div class="center-text">

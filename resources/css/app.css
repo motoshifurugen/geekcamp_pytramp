@@ -23,8 +23,7 @@ body {
     left: 50%;
     margin-top: -50vh;
     margin-left: -50vw;
-    -webkit-animation: logo-rotate 200s linear infinite;
-            animation: logo-rotate 200s linear infinite;
+    animation: logo-rotate 200s linear infinite;
     background-size: 240px;
     -webkit-backface-visibility: visible;
     backface-visibility: visible;
@@ -135,4 +134,3 @@ body {
     border-radius: inherit;
     height: 100%;
 }
-

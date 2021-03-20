@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('download', 'App\Http\Controllers\DownloadController@index');
+Route::get('/', 'App\Http\Controllers\DownloadController@index');
 
 Route::get('downloadFile', function () {
     return response()->download('../resources/img/sample.jpg');
