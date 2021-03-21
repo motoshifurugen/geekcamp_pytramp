@@ -22,3 +22,10 @@ Route::get('/', 'App\Http\Controllers\DownloadController@index');
 Route::get('downloadFile', function () {
     return response()->download('../resources/img/sample.jpg');
 });
+
+Route::get('about', function () { return view('download/about'); });
+
+Route::get('python', function () { return view('download/python'); });
+
+Route::get('trampmakers', function () { return view('download/trampmakers'); });
+

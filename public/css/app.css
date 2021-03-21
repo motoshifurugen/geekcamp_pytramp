@@ -40,6 +40,7 @@ body {
     height: 100%;
     min-height: 100vh;
     text-align: center;
+    overflow: scroll;
 }
 .center-text {
     position: relative;
@@ -159,6 +160,46 @@ body {
 .github-icon img {
     width: 100%;
     border-radius: 2rem;
+}
+
+.page-center-text {
+    position: relative;
+    color: #FFFFFF !important;
+    text-align: center;
+    margin: 5rem auto;
+}
+.page-title {
+    font-family: Roboto,-apple-system,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 3rem;
+    line-height: 3rem;
+    letter-spacing: -0.01562em;
+    color: #fff;
+    font-weight: 600;
+}
+.card {
+    width: 90%;
+    margin: 0 auto;
+    color: black !important;
+    margin-bottom: 5rem;
+}
+.card-title {
+    font-size: 2rem;
+    margin: 1.5rem 0 !important;
+}
+.card-text {
+    font-size: 1rem;
+}
+.card-text-label {
+    font-weight: bold;
+    position: relative;
+    float: left;
+    margin: 0 1rem;
+}
+.back {
+    cursor: pointer;
+    width: 40%;
+    font-size: 1rem;
+    margin: 1.25rem 0;
 }
 
 @charset "UTF-8";
