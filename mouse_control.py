@@ -2,7 +2,9 @@ import tkinter
 
 root = tkinter.Tk()
 #画面のサイズは変更可能にするか決める
-cvs = tkinter.Canvas(root,width=912,height=765)
+cvs = tkinter.Canvas(root,width=1000,height=700)
+#画面を固定
+root.resizable(False,False)
 
 #マウスポインタのx座標
 mouse_x = 0
