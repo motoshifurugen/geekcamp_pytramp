@@ -29,3 +29,16 @@ Route::get('python', function () { return view('download/python'); });
 
 Route::get('trampmakers', function () { return view('download/trampmakers'); });
 
+Route::get('zip-download', function () {
+    $files = glob(public_path().'/storage/files/*');
+    $zip = new ZipArchive();
+    $zip->open(public_path().'/pytramp.zip', ZipArchive::CREATE);
+    foreach($files as $file){
+        $file_info = pathinfo($file);
+        $file_name = $file_info['filename'].'.'.$file_info['extension'];
+        $zip->addFile($file, $file_name);
+    }
+    $zip->close();
+    return response()->download(public_path().'/pytramp.zip');
+});
+
