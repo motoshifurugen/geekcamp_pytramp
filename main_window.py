@@ -8,6 +8,8 @@ class GameWindow(tkinter.Frame):
         master.geometry("900x700")
         master.resizable(False,False)
         
+        self.img_sample1="img\sample1.png"
+
         self.pack()
         self.create_widget()
 
@@ -30,13 +32,34 @@ class GameWindow(tkinter.Frame):
 
         """ここから1行に含める"""
         #相手の獲得ゲーム数
-        #相手のカード
-        #自分のカード
+        player2_game_count_label=tkinter.Label(self,
+            text="勝利数 {}".format(self.player2_game_count()),font=(self.label_font))
+        player2_game_count_label.grid(row=2,column=1,sticky=tkinter.NW)
+        
+        #相手のカードの画像表示
+        player2_card=tkinter.PhotoImage(file="img\sample1.png")
+        canvas=tkinter.Canvas(bg="white",width=100,height=200)
+        canvas.pack() 
+        """pack()でないとcanvasは配置できない?1行に収められるように工夫が必要"""
+        canvas.create_image(0,0,image=player2_card)
+        #自分のカードの画像表示
+        player1_card=tkinter.PhotoImage(file="img\sample{}.png".format(1))
+        canvas=tkinter.Canvas(bg="white",width=100,height=200)
+        canvas.pack()
+        """pack()でないとcanvasは配置できない?1行に収められるように工夫が必要"""
+        canvas.create_image(0,0,image=player1_card)
         #自分の獲得ゲーム数
+        player1_game_count_label=tkinter.Label(self,
+            text="勝利数 {}".format(self.player2_game_count()),font=(self.label_font))
+        player1_game_count_label.grid(row=2,column=4,sticky=tkinter.SE)
         """ここまで1行に含める"""
         
         #自分のデッキ
-
+        player1_deck_list=[]
+        for _ in range(14):
+            player1_deck_list.append(tkinter.Button(self,text="{}".format(_),
+                font=(self.label_font) ,command=lambda:self.callback(_)))
+            player1_deck_list[_].grid(row=3,column=_,padx=3,pady=10)
 
     #テスト用
     def game_count(self):
@@ -45,6 +68,15 @@ class GameWindow(tkinter.Frame):
     #テスト用
     def callback(self,x):
         print("ボタン{}".format(x))
+    #テスト用
+    def player2_game_count(self):
+        GAME_COUNT=5
+        return GAME_COUNT
+    #テスト用
+    def player1_game_count(self):
+        GAME_COUNT=8
+        return GAME_COUNT
+    
         
 #テスト用
 window=tkinter.Tk()
