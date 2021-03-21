@@ -19,7 +19,7 @@
                     </div>
                     <div class="text-subtitle">2021.3.21 created by TrampM4kers</div>
                     <div class="downloadBox">
-                        <a href="/downloadFile">PyTrampをダウンロードする</a>
+                        <a href="/zip-download">PyTrampをダウンロード（zip）</a>
                     </div>
                     <div class="button-box">
                         <a class="button-wrapper" href="{{ url('/about') }}">
