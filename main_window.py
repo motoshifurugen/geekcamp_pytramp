@@ -54,15 +54,15 @@ class GameWindow(tkinter.Frame):
         
         #相手のカードの画像表示
         player2_card=tkinter.PhotoImage(file="")
-        canvas=tkinter.Canvas(bg="white",width=100,height=200)
-        canvas.pack() 
+        canvas=tkinter.Canvas(multi_frame,bg="white",width=100,height=200)
+        canvas.pack(side=LEFT,padx=10,pady=20) 
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
         canvas.create_image(0,0,image=player2_card)
         
         #自分のカードの画像表示
         player1_card=tkinter.PhotoImage(file="")
-        canvas=tkinter.Canvas(bg="white",width=100,height=200)
-        canvas.pack()
+        canvas=tkinter.Canvas(multi_frame,bg="white",width=100,height=200)
+        canvas.pack(side=LEFT,padx=10,pady=20)
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
         canvas.create_image(0,0,image=player1_card)
         
