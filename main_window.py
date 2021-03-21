@@ -3,6 +3,46 @@ from tkinter.constants import BOTH, CENTER, E, LEFT
 from tkinter.font import Font
 from typing import Sized, SupportsIndex
 
+root = tkinter.Tk()
+#タイトル表示
+root.title("画像表示したい")
+#サイズ固定
+root.resizable(False,False)
+canvas = tkinter.Canvas(root,width=1000,height=700)
+canvas.pack()
+gazou0 = tkinter.PhotoImage(file="Splitted-Image-0-0.png")
+canvas.create_image(100,500,image=gazou0)
+gazou1 = tkinter.PhotoImage(file="Splitted-Image-1-0.png")
+canvas.create_image(150,500,image=gazou1)
+gazou2 = tkinter.PhotoImage(file="Splitted-Image-2-0.png")
+canvas.create_image(200,500,image=gazou2)
+gazou3 = tkinter.PhotoImage(file="Splitted-Image-3-0.png")
+canvas.create_image(250,500,image=gazou3)
+gazou4 = tkinter.PhotoImage(file="Splitted-Image-4-0.png")
+canvas.create_image(300,500,image=gazou4)
+gazou5 = tkinter.PhotoImage(file="Splitted-Image-5-0.png")
+canvas.create_image(350,500,image=gazou5)
+gazou6 = tkinter.PhotoImage(file="Splitted-Image-6-0.png")
+canvas.create_image(400,500,image=gazou6)
+gazou7 = tkinter.PhotoImage(file="Splitted-Image-7-0.png")
+canvas.create_image(450,500,image=gazou7)
+gazou8 = tkinter.PhotoImage(file="Splitted-Image-8-0.png")
+canvas.create_image(500,500,image=gazou8)
+gazou9 = tkinter.PhotoImage(file="Splitted-Image-9-0.png")
+canvas.create_image(550,500,image=gazou9)
+gazou10 = tkinter.PhotoImage(file="Splitted-Image-10-0.png")
+canvas.create_image(600,500,image=gazou10)
+gazou11 = tkinter.PhotoImage(file="Splitted-Image-11-0.png")
+canvas.create_image(650,500,image=gazou11)
+gazou12 = tkinter.PhotoImage(file="Splitted-Image-12-0.png")
+canvas.create_image(700,500,image=gazou12)
+
+root.title("画像表示したい")
+root.geometry("1000x800")
+
+root.mainloop()
+
+
 class GameWindow(tkinter.Frame):
     def __init__(self,master = None):
         tkinter.Frame.__init__(self,master)
@@ -10,7 +50,7 @@ class GameWindow(tkinter.Frame):
         master.geometry("900x700")
         master.resizable(False,False)
         
-        self.img_sample1="img\sample1.png"
+        self.img_sample1="Splitted-Image-0-1.png"
 
         self.pack()
         self.create_widget()
@@ -53,14 +93,14 @@ class GameWindow(tkinter.Frame):
         player2_game_count_label.pack(side=LEFT)
         
         #相手のカードの画像表示
-        player2_card=tkinter.PhotoImage(file="")
+        player2_card=tkinter.PhotoImage(file="Splitted-Image-0-0.png")
         canvas=tkinter.Canvas(bg="white",width=100,height=200)
         canvas.pack() 
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
-        canvas.create_image(0,0,image=player2_card)
+        canvas.create_image(50,100,image=player2_card)
         
         #自分のカードの画像表示
-        player1_card=tkinter.PhotoImage(file="")
+        player1_card=tkinter.PhotoImage(file="Splitted-Image-12-1.png")
         canvas=tkinter.Canvas(bg="white",width=100,height=200)
         canvas.pack()
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
