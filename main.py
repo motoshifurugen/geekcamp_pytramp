@@ -23,15 +23,12 @@ class StartWindow(tk.Frame):
         self.label = tk.Label(master,text="Pytrump",font=(self.default_font))
         #self.label.place(x=200,y=100)
         self.label.pack()
-        #self.label.grid(row=0,column=1,columnspan=3,padx=210,pady=50)
         self.game_start_button = tk.Button(master,text="game start",font=(self.button_font),width=10,command=self.buttonClickNext)
         self.quit_button = tk.Button(master,text="quit",font=(self.button_font),width=10,command=exit)
         #self.game_start_button.place(x=20,y=300)
         #self.quit_button.place(x=300,y=300)
         self.game_start_button.pack()
         self.quit_button.pack()
-        #self.game_start_button.grid(row=2,column=1,padx=60,pady=40)
-        #self.quit_button.grid(row=2,column=2,padx=60,pady=40)
 
     def buttonClickResult(self):
         self.window.append(tk.Toplevel())
@@ -60,13 +57,10 @@ class ResultWindow(tk.Frame):
 
         self.label = tk.Label(master,text="Result",font=(self.default_font))
         self.label.place(x=220,y=100)
-        #self.label.grid(row=0,column=1,columnspan=3,padx=210,pady=50)
         self.restart_button = tk.Button(master,text="restart",font=(self.button_font),width=10,command=self.buttonClick)
         self.quit_button = tk.Button(master,text="quit",font=(self.button_font),width=10,command=exit)
         self.restart_button.place(x=20,y=300)
         self.quit_button.place(x=300,y=300)
-        #self.restart_button.grid(row=2,column=1,padx=60,pady=40)
-        #self.quit_button.grid(row=2,column=2,padx=60,pady=40)
 
 
     def buttonClick(self):
@@ -112,10 +106,6 @@ class NextWindow(tk.Frame):
         self.trump_11_button.place(x=440,y=350)
         self.trump_12_button.place(x=480,y=350)
         self.trump_13_button.place(x=500,y=350)
-        #self.result_button.grid(row=2,column=1,padx=60,pady=40)
-        #self.trump_1_button.grid(row=3,column=1,padx=60,pady=40)
-        #self.trump_2_button.grid(row=3,column=2,padx=60,pady=40)
-        #self.trump_2_button.grid(row=3,column=3,padx=60,pady=40)
 
         # game variables
         self.player = Player("player")
