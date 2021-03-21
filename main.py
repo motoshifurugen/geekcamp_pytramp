@@ -17,24 +17,37 @@ class StartWindow(tk.Frame):
         self.button_font = tk.font.Font(family="System",size=36)
 
         self.window = []
+        self.game = []
+        self.result =[]
 
         self.label = tk.Label(master,text="Pytrump",font=(self.default_font))
-        self.label.place(x=200,y=100)
+        #self.label.place(x=200,y=100)
+        self.label.pack()
         #self.label.grid(row=0,column=1,columnspan=3,padx=210,pady=50)
         self.game_start_button = tk.Button(master,text="game start",font=(self.button_font),width=10,command=self.buttonClickNext)
         self.quit_button = tk.Button(master,text="quit",font=(self.button_font),width=10,command=exit)
-        self.game_start_button.place(x=20,y=300)
-        self.quit_button.place(x=300,y=300)
+        #self.game_start_button.place(x=20,y=300)
+        #self.quit_button.place(x=300,y=300)
+        self.game_start_button.pack()
+        self.quit_button.pack()
         #self.game_start_button.grid(row=2,column=1,padx=60,pady=40)
         #self.quit_button.grid(row=2,column=2,padx=60,pady=40)
 
     def buttonClickResult(self):
         self.window.append(tk.Toplevel())
-        ResultWindow(self.window[len(self.window)-1])
+
+        if len(self.result) == 1:
+            r = self.result.pop()
+            r.master.destroy()
+        self.result.append(ResultWindow(self.window[len(self.window)-1]))
 
     def buttonClickNext(self):
         self.window.append(tk.Toplevel())
-        NextWindow(self.window[len(self.window)-1])
+
+        if len(self.game) == 1:
+            g = self.game.pop()
+            g.master.destroy()
+        self.game.append(NextWindow(self.window[len(self.window)-1]))
 
 class ResultWindow(tk.Frame):
     def __init__(self,master):
@@ -109,7 +122,8 @@ class NextWindow(tk.Frame):
         self.cpu = Player("cpu")
         # 1:player win  2:cpu win 0:draw
         self.winFlag = 0
-
+        # turn
+        self.turn = 1
 
 
     def buttonClick(self):
@@ -143,6 +157,14 @@ class NextWindow(tk.Frame):
         elif flagResult == 2:
             print("cpu win!")
             self.cpu.numWins += 1
+
+        # GUI処理呼び出し
+
+        if self.turn == 13:
+            self.buttonClick()
+
+        # turnを1増やす
+        self.turn += 1
 
         return flagResult
 
