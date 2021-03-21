@@ -85,7 +85,7 @@ class GameWindow(tkinter.Frame):
 
     #テスト用
     def game_count(self):
-        GAME_COUNT=10
+        GAME_COUNT=11
         return GAME_COUNT
     #テスト用
     def game_result(self):
@@ -100,7 +100,7 @@ class GameWindow(tkinter.Frame):
         return GAME_COUNT
     #テスト用
     def player1_game_count(self):
-        GAME_COUNT=8
+        GAME_COUNT=6
         return GAME_COUNT
     
         

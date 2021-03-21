@@ -101,10 +101,9 @@ class ResultWindow(tkinter.Frame):
 
 #テスト用
 window=tkinter.Tk()
-
+"""
 test=ResultWindow(window)
 test.mainloop()
 """
 test=StartWindow(window)
 test.mainloop()
-"""
