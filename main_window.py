@@ -1,5 +1,5 @@
 import tkinter
-from tkinter.constants import BOTH, LEFT
+from tkinter.constants import BOTH, CENTER, E, LEFT
 from tkinter.font import Font
 from typing import Sized, SupportsIndex
 
@@ -24,8 +24,15 @@ class GameWindow(tkinter.Frame):
         #ゲームカウントフレーム
         game_count_frame=tkinter.Frame(self.master)
         game_count_label=tkinter.Label(game_count_frame,
-            text="{}ゲーム目".format(self.game_count()),font=(self.label_font))
+            text="{}ゲーム目".format(self.game_count()),font=(self.label_font),
+            anchor=tkinter.W)
+        space_fill_label=tkinter.Label(game_count_frame,text="　　　　　　    ")
+        game_result_label=tkinter.Label(game_count_frame,
+            text="直前のゲーム結果:{}".format(self.game_result()),font=(self.label_font)
+            ,anchor=tkinter.E)
         game_count_label.pack(side=tkinter.LEFT)
+        space_fill_label.pack(side=tkinter.LEFT)
+        game_result_label.pack(side=tkinter.RIGHT)
         #ゲームカウントフレームをパック
         game_count_frame.pack(side=tkinter.TOP)
 
@@ -46,14 +53,14 @@ class GameWindow(tkinter.Frame):
         player2_game_count_label.pack(side=LEFT)
         
         #相手のカードの画像表示
-        player2_card=tkinter.PhotoImage(file="img\sample1.png")
+        player2_card=tkinter.PhotoImage(file="")
         canvas=tkinter.Canvas(bg="white",width=100,height=200)
         canvas.pack() 
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
         canvas.create_image(0,0,image=player2_card)
         
         #自分のカードの画像表示
-        player1_card=tkinter.PhotoImage(file="img\sample{}.png".format(1))
+        player1_card=tkinter.PhotoImage(file="")
         canvas=tkinter.Canvas(bg="white",width=100,height=200)
         canvas.pack()
         #pack()でないとcanvasは配置できない?1行に収められるように工夫が必要
@@ -80,6 +87,10 @@ class GameWindow(tkinter.Frame):
     def game_count(self):
         GAME_COUNT=10
         return GAME_COUNT
+    #テスト用
+    def game_result(self):
+        GAME_RESULT="WIN"
+        return GAME_RESULT
     #テスト用
     def callback(self,x):
         print("ボタン{}".format(x))
